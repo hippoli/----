@@ -63,5 +63,26 @@ int main()
     }
     printf("int最大数为:%d\tint最小值为:%d\tint元素之和为:%d\n", max_int, min_int, all_num_int);
     printf("double最大值的下标识%d\t最大值-最小值为%f\n", array_double_num, max_double - min_double);
+
+    //排序
+    for (int num = 0; num < 70; num++)
+    {
+        for (int num_ls = 0; num_ls < 69; num_ls++)
+        {
+            if (array_int[num_ls] > array_int[num_ls+1])
+            {
+                int ls = array_int[num_ls+1];
+                array_int[num_ls+1] = array_int[num_ls];
+                array_int[num_ls] = ls;
+            }
+        }
+    }
+    for (int num = 0; num < 70; num++)
+    {
+        printf("%d\n",array_int[num]);
+    }
+
+    
+    
     return 0;
 }

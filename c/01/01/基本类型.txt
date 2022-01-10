@@ -1,0 +1,63 @@
+1.基本类型
+    整数类型
+        char    /   unsigned char
+        short   /   unsigned short
+        int     /   unsigned int
+        long    /   unsigned long
+
+        以上类型可以保存整数,区别:
+        1.signed / unsigned
+            signed 表示有符号的数
+                即数据由两部分组成: 符号位 + 数值位
+                符号位为0,表示正数
+                符号位为1,表示负数
+            unsigned 表示无符号的数
+                数据中的bit位全是数值位
+        
+        2.所占用空间大小不同
+            运算符:sizeof(),用于计算某种类型所占用字节大小
+                sizeof(char) == 1
+                sizeof(short) == 2
+                sizeof(int) == 4
+                //在64位gcc环境下
+                sizeof(long) == 8  
+            
+            c标准要求:
+                sizeof(long)>=sizeof(int)>=sizeof(short)>=sizeof(char)
+
+    实数类型
+        C语言浮点数类型
+        float           单精度浮点数
+        double          双精度浮点数
+        long double     长双精度浮点数
+
+        区别:
+        1.所占空间不同
+            sizeof(float) == 4
+            sizeof(double) == 8
+            sizeof(long double) == 16 或者 12
+
+        2.表示精度不同
+            c标准规定:
+                float至少表示6位有效数字
+                double至少表示10位有效数字
+                long double至少和double相同
+
+    
+    void类型
+        三种用途:
+        1.作为函数返回值,表示这函数不返回任何数据
+        例:
+            void test1()
+            {
+                //不能返回任何数据
+                return;
+            }
+        2.void*     表示万能指针或者通用指针
+        3.作为函数参数,表示该函数不接受任何参数
+        例:
+            //c语言中可以接受任何数量和类型的参数,c++中两者没区别
+            void test1(void)
+            {}
+            void test2()
+            {}   

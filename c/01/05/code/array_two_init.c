@@ -6,9 +6,9 @@
 #include<stdlib.h>
 #include<time.h>
 int main(){
-    int array_34[3][4];
-    int array_44[4][4];
-    int array_55[5][5];
+    int array_34[3][4] = {0};
+    int array_44[4][4] = {0};
+    int array_55[5][5] = {0};
     int max = 0;
     int min = 100;
     double age = 0;
@@ -70,7 +70,7 @@ int main(){
         }
         
     }
-    // 求5x5数组中主对角线元素的和及副对角线元素的积
+    // 求5x5数组中主对角线元素的和及副对角线元素的积3
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)

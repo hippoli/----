@@ -13,7 +13,7 @@ int main(){
         {
             array_sjx[i][j] = rand()%10;
             printf("%d\t",array_sjx[i][j]);
-        }
+        } 
         printf("\n");
     }
     for (int i = 0; i < ROW; i++)
